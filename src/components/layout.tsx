@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import "../styles/global.css"
+import Header from "./header"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -10,13 +12,12 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
+        <Header />
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <Header />
     )
   }
 
